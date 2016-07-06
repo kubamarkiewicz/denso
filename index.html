@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
+
+    <title>Control de líneas de producción : Monitoring AGV's</title>
+
+    <!-- Le styles -->
+    <link href="js/libraries/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/libraries/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+<body ng-app="myApp">
+
+	<header>
+		<div class="app-name">Monitoring AGV's</div>
+		<div class="logos">
+			<img src="images/logo_AD.png" alt="Artisteril:Diasa">
+			<img src="images/logo_denso.png" alt="Denso">
+		</div>
+		<h1 class="page-title">Control de líneas de producción</h1>
+		<nav>
+			<a href="index.html" class="selected">Control producción</a>
+			<a href="synoptic.html">Sinóptico</a>
+			<a href="incidents.html">Histórico incidencias</a>
+		</nav>
+	</header>
+
+	<div ng-view></div>
+
+	<footer></footer>
+
+
+	<!-- Le javascript -->
+	<!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/libraries/jquery/dist/jquery.min.js"></script>
+    <script src="js/libraries/angular/angular.min.js"></script>
+    <script src="js/libraries/angular-route/angular-route.min.js"></script>
+	<script src="js/libraries/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/libraries/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Components -->
+    <script src="js/components/production-control/production-control-controller.js"></script>
+
+    <!-- Services -->
+
+    <!-- Directives -->
+    <script src="js/directives/custom-checkbox.js"></script>
+
+	<script>
+		
+		$(function() {
+
+			$('select').selectpicker({
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>

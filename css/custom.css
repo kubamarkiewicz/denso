@@ -1,0 +1,381 @@
+
+/************************************************
+ Bootstrap 3 Grid Breakpints (http://getbootstrap.com/css/#grid)
+
+ xs - Extra small devices 	< 768 px
+ sm - Small devices			< 992 px
+ md - Medium devices		< 1200 px
+ lg - Large devices			>= 1200 px
+
+************************************************/
+
+
+/***********************************************/
+/* Web Fonts                                   */
+/***********************************************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+
+/***********************************************/
+/* General styles                              */
+/***********************************************/
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body { 
+	font-family: 'Roboto', sans-serif;
+	color: #000000;
+	font-size: 24px;
+	background-color: #f0f0f0; 
+	margin-bottom: 79px;
+}
+a { 
+	color: #7dbd01; 
+	transition: 0.15s;
+	text-decoration: none;
+}
+a:hover, a:focus { 
+	text-decoration: none; 
+	color: #7dbd01; 
+}
+
+
+/* mobile */
+@media screen and (max-width: 991px) {
+
+}
+
+/***********************************************/
+/* Overwritten Bootstrap Styles                */
+/***********************************************/
+
+
+/***********************************************/
+/* Forms                                       */
+/***********************************************/
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 79px;
+	background-color: #00557f;
+	color: #ffffff;
+}
+
+
+
+/***********************************************/
+/* Components	               		           */
+/***********************************************/
+
+header {
+	background-color: #ffffff;
+}
+header .app-name {
+	height: 64px;
+	background-color: #00557f;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 28px 0 0 30px;
+}
+header .logos {
+	float: right;
+}
+header .logos img {
+	margin-right: 17px;
+}
+header h1.page-title {
+	margin: 0;
+	height: 85px;
+	padding: 20px 30px 0 30px;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 300;
+	white-space: nowrap;
+	color: #00557f;
+}
+header nav {
+	clear: both;
+	background-color: #00557f;
+	height: 80px;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 0 0 0 30px;
+	font-weight: 500;
+}
+header nav a,
+header nav a:focus {
+	color: #ffffff;
+	display: block;
+	height: 100%;
+	float: left;
+	width: 25%;
+	white-space: nowrap;
+	padding: 30px 17px 0 17px;
+	border-left: 1px solid #00557f;
+	font-size: 30px;
+}
+header nav a:hover,
+header nav a.selected {
+	background-color: #0276af;
+	color: #ffffff;
+}
+
+
+
+/***********************************************/
+/* Pages styles    		                      */
+/***********************************************/
+
+
+/* production-control   		                      */
+
+section.production-control {
+	padding: 30px 15px;
+}
+section.production-control .col-sm-3 {
+	border-left: 1px solid #005580;
+}
+section.production-control .col-sm-3:first-child {
+	border-left: none;
+}
+section.production-control .item {
+	background: linear-gradient(to bottom, #72bd00 0%,#73ad01 100%);
+	margin-bottom: 20px;
+	height: 50px;
+	color: #000000;
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 50px;
+	position: relative;
+}
+section.production-control .item:last-child {
+	margin-bottom: 0px;
+}
+section.production-control .item.empty {
+	background: linear-gradient(to bottom, #c0c0c0 0%,#afafaf 100%);
+}
+section.production-control .item time {
+	float: left;
+	width: 30%;
+	text-align: center;
+	border-right: 1px solid #f0f0f0;
+}
+section.production-control .item .bootstrap-select {
+	display: block;
+	float: left;
+	width: 70% !important;
+	height: 100%;;
+}
+section.production-control .item .bootstrap-select > .dropdown-toggle {
+	height: 100%;
+	border: none;
+	background-color: rgba(0,0,0,0);
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+section.production-control .item .bootstrap-select.btn-group .dropdown-menu {
+	border-radius: 0;
+}
+section.production-control .item .bootstrap-select.btn-group .dropdown-toggle .caret {
+	border-top: 18px dashed #ffffff !important;
+	border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    margin-top: 1px;
+}
+section.production-control .item .bootstrap-select.btn-group .bs-caret {
+    border-left: 1px solid #f0f0f0;
+    height: 100%;
+    display: inline-block;
+    width: 50px;
+    right: 0;
+    position: absolute;
+    top: 0;;
+}
+section.production-control .item .dropdown-menu > li > a {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+section.production-control .item .dropdown-menu > li > a:focus,
+section.production-control .item .dropdown-menu > li > a:hover {
+	background-color: #7dbd01;
+}
+
+
+
+
+
+
+/* sinoptic  		                      */
+	
+section.sinoptic  {
+	position: relative;
+}	
+section.sinoptic #mapa {
+	position: relative;
+	display: block;
+	height: auto;
+	overflow: hidden;
+}
+section.sinoptic #mapa img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+section.sinoptic .agv {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: transform 0.5s ease-out;
+}
+section.sinoptic .agv span {
+	position: absolute;
+	visibility: visible;
+	cursor: pointer;
+	background-color: #bdb9ba;
+	color: #ffffff;
+	font-size: 18px;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 8px;
+	transform: translate(-50%, -50%);
+	transform-origin: 0 0;
+}
+section.sinoptic .agv.vertical span {
+	transform: rotate(90deg) translate(-50%, -50%);
+}
+section.sinoptic .agv#agv-1 span {
+	background-color: #72bd00;
+}
+section.sinoptic .agv#agv-2 span {
+	background-color: #c50016;
+}
+
+
+section.sinoptic #incidencia {
+	position: absolute;
+	background: linear-gradient(to bottom, #c50016 0%,#b10014 100%);
+	color: #ffffff;
+	text-transform: uppercase;
+	right: 30px;
+	top: 60px;
+	padding: 35px;
+	width: 70%;
+	text-align: center;
+	font-size: 24px;
+}
+section.sinoptic #statisitcs {
+	position: absolute;
+	right: 30px;
+	top: 200px;
+	text-align: right;
+	color: #000000;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+section.sinoptic #statisitcs .legend {
+	margin-bottom: 8px;
+}
+section.sinoptic #statisitcs .legend .item {
+	margin-left: 14px;
+}
+section.sinoptic #statisitcs .legend .item .square {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 4px;
+}
+section.sinoptic .color-1 {
+	background: linear-gradient(to bottom, #72bd00 0%,#73ad01 100%);
+}
+section.sinoptic .color-2 {
+	background: linear-gradient(to bottom, #bab8b9 0%,#abaaa8 100%);
+}
+section.sinoptic .color-3 {
+	background: linear-gradient(to bottom, #fb7f00 0%,#eb7400 100%);
+}
+section.sinoptic .color-4 {
+	background: linear-gradient(to bottom, #c50016 0%,#b10014 100%);
+}
+section.sinoptic .color-5 {
+	background: linear-gradient(to bottom, #4b4b4b 0%,#454545 100%);
+}
+section.sinoptic #statisitcs .graph-wrap {
+	margin-bottom: 3px;
+}
+section.sinoptic #statisitcs .graph-wrap .title {
+	display: inline;
+	font-size: 24px;
+	padding-right: 10px;
+}
+section.sinoptic #statisitcs .graph-wrap .graph {
+	display: inline-block;
+	height: 30px;
+	width: 1000px;
+	position: relative;
+	color: #ffffff;
+	text-align: left;
+	vertical-align: middle;
+	margin-top: -7px;
+}
+section.sinoptic #statisitcs .graph-wrap .graph .value {
+	display: inline-block;
+	float: left;
+	padding-left: 5px;
+	border-left: 1px solid #f0f0f0;
+	height: 100%;
+	line-height: 30px;;
+}
+
+
+
+
+/* incidents  		                      */
+	
+section.incidents  {
+	padding: 60px 80px 60px 440px;
+}	
+section.incidents .table-wrap  {
+	max-height: 660px;
+	overflow: auto;
+}	
+section.incidents table  {
+}	
+section.incidents table tr {
+}	
+section.incidents table th {
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #4b4b4b;
+	font-weight: normal;
+}	
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-left: 1px solid #ffffff;
+}	
+section.incidents table td {
+}	
+section.incidents table tr.error td {
+	background-color: #c40001;
+	color: #ffffff;
+}	

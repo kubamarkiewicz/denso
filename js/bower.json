@@ -1,0 +1,22 @@
+{
+  "name": "Artisteril",
+  "version": "0.0.0",
+  "authors": [
+    "Kuba Markiewicz <kuba.markiewicz@gmail.com>"
+  ],
+  "main": "css/custom.css",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bootstrap-select": "^1.10.0",
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7"
+  }
+}
