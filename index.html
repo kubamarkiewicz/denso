@@ -26,10 +26,10 @@
 			<img src="images/logo_denso.png" alt="Denso">
 		</div>
 		<h1 class="page-title">Control de líneas de producción</h1>
-		<nav>
-			<a href="index.html" class="selected">Control producción</a>
-			<a href="synoptic.html">Sinóptico</a>
-			<a href="incidents.html">Histórico incidencias</a>
+		<nav class="production-control">
+			<a href="#/" class="production-control">Control producción</a>
+			<a href="#/synoptic" class="synoptic">Sinóptico</a>
+			<a href="#/incidents" class="incidents">Histórico incidencias</a>
 		</nav>
 	</header>
 
@@ -51,22 +51,12 @@
 
     <!-- Components -->
     <script src="js/components/production-control/production-control-controller.js"></script>
+    <script src="js/components/synoptic/synoptic-controller.js"></script>
+    <script src="js/components/incidents/incidents-controller.js"></script>
 
     <!-- Services -->
 
     <!-- Directives -->
-    <script src="js/directives/custom-checkbox.js"></script>
-
-	<script>
-		
-		$(function() {
-
-			$('select').selectpicker({
-			});
-
-		});
-
-	</script>
 
 </body>
 </html>

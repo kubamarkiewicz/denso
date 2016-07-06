@@ -41,6 +41,9 @@ a:hover, a:focus {
 	text-decoration: none; 
 	color: #7dbd01; 
 }
+a:focus, a:active {
+	outline:none;
+}
 
 
 /* mobile */
@@ -125,6 +128,9 @@ header nav a:focus {
 	font-size: 30px;
 }
 header nav a:hover,
+header nav.production-control a.production-control,
+header nav.synoptic a.synoptic,
+header nav.incidents a.incidents,
 header nav a.selected {
 	background-color: #0276af;
 	color: #ffffff;
@@ -222,23 +228,24 @@ section.production-control .item .dropdown-menu > li > a:hover {
 
 
 
-/* sinoptic  		                      */
+/* synoptic  		                      */
 	
-section.sinoptic  {
+section.synoptic  {
 	position: relative;
 }	
-section.sinoptic #mapa {
+section.synoptic #mapa {
 	position: relative;
 	display: block;
 	height: auto;
 	overflow: hidden;
 }
-section.sinoptic #mapa img {
+section.synoptic #mapa img {
 	display: block;
 	width: 100%;
 	height: auto;
+	max-height: calc(100vh - 320px);
 }
-section.sinoptic .agv {
+section.synoptic .agv {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -246,7 +253,7 @@ section.sinoptic .agv {
     visibility: hidden;
     transition: transform 0.5s ease-out;
 }
-section.sinoptic .agv span {
+section.synoptic .agv span {
 	position: absolute;
 	visibility: visible;
 	cursor: pointer;
@@ -261,18 +268,18 @@ section.sinoptic .agv span {
 	transform: translate(-50%, -50%);
 	transform-origin: 0 0;
 }
-section.sinoptic .agv.vertical span {
+section.synoptic .agv.vertical span {
 	transform: rotate(90deg) translate(-50%, -50%);
 }
-section.sinoptic .agv#agv-1 span {
+section.synoptic .agv#agv-1 span {
 	background-color: #72bd00;
 }
-section.sinoptic .agv#agv-2 span {
+section.synoptic .agv#agv-2 span {
 	background-color: #c50016;
 }
 
 
-section.sinoptic #incidencia {
+section.synoptic #incidencia {
 	position: absolute;
 	background: linear-gradient(to bottom, #c50016 0%,#b10014 100%);
 	color: #ffffff;
@@ -284,7 +291,7 @@ section.sinoptic #incidencia {
 	text-align: center;
 	font-size: 24px;
 }
-section.sinoptic #statisitcs {
+section.synoptic #statisitcs {
 	position: absolute;
 	right: 30px;
 	top: 200px;
@@ -294,42 +301,42 @@ section.sinoptic #statisitcs {
 	font-size: 18px;
 	font-weight: bold;
 }
-section.sinoptic #statisitcs .legend {
+section.synoptic #statisitcs .legend {
 	margin-bottom: 8px;
 }
-section.sinoptic #statisitcs .legend .item {
+section.synoptic #statisitcs .legend .item {
 	margin-left: 14px;
 }
-section.sinoptic #statisitcs .legend .item .square {
+section.synoptic #statisitcs .legend .item .square {
 	display: inline-block;
 	width: 14px;
 	height: 14px;
 	margin-right: 4px;
 }
-section.sinoptic .color-1 {
+section.synoptic .color-1 {
 	background: linear-gradient(to bottom, #72bd00 0%,#73ad01 100%);
 }
-section.sinoptic .color-2 {
+section.synoptic .color-2 {
 	background: linear-gradient(to bottom, #bab8b9 0%,#abaaa8 100%);
 }
-section.sinoptic .color-3 {
+section.synoptic .color-3 {
 	background: linear-gradient(to bottom, #fb7f00 0%,#eb7400 100%);
 }
-section.sinoptic .color-4 {
+section.synoptic .color-4 {
 	background: linear-gradient(to bottom, #c50016 0%,#b10014 100%);
 }
-section.sinoptic .color-5 {
+section.synoptic .color-5 {
 	background: linear-gradient(to bottom, #4b4b4b 0%,#454545 100%);
 }
-section.sinoptic #statisitcs .graph-wrap {
+section.synoptic #statisitcs .graph-wrap {
 	margin-bottom: 3px;
 }
-section.sinoptic #statisitcs .graph-wrap .title {
+section.synoptic #statisitcs .graph-wrap .title {
 	display: inline;
 	font-size: 24px;
 	padding-right: 10px;
 }
-section.sinoptic #statisitcs .graph-wrap .graph {
+section.synoptic #statisitcs .graph-wrap .graph {
 	display: inline-block;
 	height: 30px;
 	width: 1000px;
@@ -339,7 +346,7 @@ section.sinoptic #statisitcs .graph-wrap .graph {
 	vertical-align: middle;
 	margin-top: -7px;
 }
-section.sinoptic #statisitcs .graph-wrap .graph .value {
+section.synoptic #statisitcs .graph-wrap .graph .value {
 	display: inline-block;
 	float: left;
 	padding-left: 5px;
@@ -357,7 +364,7 @@ section.incidents  {
 	padding: 60px 80px 60px 440px;
 }	
 section.incidents .table-wrap  {
-	max-height: 660px;
+	max-height: calc(100vh - 445px);
 	overflow: auto;
 }	
 section.incidents table  {
