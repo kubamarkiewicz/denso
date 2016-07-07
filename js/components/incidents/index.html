@@ -10,111 +10,11 @@
 					<th class="text-center">AGV</th>
 				</tr>
 
-				<tr class="error">
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
+				<tr ng-repeat="item in data" ng-class="{error: item.Severity==1}">
+					<td>{{ item.Time }} </td>
+					<td>{{ item.Message }}</td>
+					<td class="text-center">{{ item.IdAGV }}</td>
 				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>DETECCIÓ ESCANER DAVANTER</td>
-					<td class="text-center">1</td>
-				</tr>
-				<tr>
-					<td>25-06-2016 / 13:28:52</td>
-					<td>ERROR VARIADOR</td>
-					<td class="text-center">2</td>
-				</tr>
-
-
 
 
 			</table>
