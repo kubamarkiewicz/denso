@@ -2,7 +2,7 @@ app.controller('IncidentsController', ['$scope', '$http', function($scope, $http
 
 	$("header nav").attr("class", "incidents");
 
-	var apiUrl = 'api/Get_IncidencesResult.json';
+	var apiUrl = 'web-service/Get_IncidencesResult.json';
 
     $scope.data = {};
 
@@ -13,14 +13,24 @@ app.controller('IncidentsController', ['$scope', '$http', function($scope, $http
             url     : apiUrl
          })
         .success(function(data) {
-        	// parse date: var date = new Date(parseInt(jsonDate.substr(6)));
-        	// console.log(data);
             if (data) {
+
+                // fix date
+                for (var i in data.Get_IncidencesResult) {
+                    data.Get_IncidencesResult[i].Time = fixDate(data.Get_IncidencesResult[i].Time);
+                }
+
                 $scope.data = data.Get_IncidencesResult;
             }
         });
     }
 
     $scope.loadData();
+
+
+    function fixDate(date)
+    {
+        return new Date(parseInt(date.slice(6, -2))).toISOString().substring(0, 19).replace('T', ' ');
+    }
 
 }]);
