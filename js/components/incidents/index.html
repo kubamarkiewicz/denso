@@ -7,10 +7,10 @@
 				
 				<div class="col-sm-2">
 					<p><label>Filtro por AGV</label></p>
-					<select class="form-control">
-						<option value="">- sin uso -</option>
-						<option value="eng 5" selected="selected">eng 5</option>
-						<option value="eng 4">eng 4</option>
+					<select ng-change="loadData()" ng-model="AGVId">
+						<option value="0">Todos</option>
+						<option value="1">AGV 1</option>
+						<option value="2">AGV 2</option>
 					</select>
 				</div><!-- /.col -->
 				<div class="col-md-1">
