@@ -1,0 +1,22 @@
+{
+    "Get_DestinationsResult": [
+        {
+            "IdDestination": "Almacen"
+        },
+        {
+            "IdDestination": "MTR3"
+        },
+        {
+            "IdDestination": "BPC"
+        },
+        {
+            "IdDestination": "TPMS"
+        },
+        {
+            "IdDestination": "AC 3.4"
+        },
+        {
+            "IdDestination": "ENG 10"
+        }
+    ]
+}
