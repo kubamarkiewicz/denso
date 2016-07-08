@@ -86,6 +86,7 @@ label {
 }
 .bootstrap-select.btn-group .dropdown-menu {
 	border-radius: 0;
+	padding: 0;
 }
 .bootstrap-select.btn-group .dropdown-toggle .caret {
 	border-top: 18px dashed #ffffff !important;
@@ -231,12 +232,37 @@ section.production-control .item.empty {
 }
 section.production-control .item time {
 	float: left;
-	width: 30%;
 	text-align: center;
 	border-right: 1px solid #f0f0f0;
+	display: inline-block;
+	width: 30%;
 }
 
 
+section.production-control .bootstrap-select {;
+	display: block;
+	width: 70% !important;;
+	margin-top: -4px;;
+	background-color: transparent;;
+}
+section.production-control .bootstrap-select > .dropdown-toggle {
+	font-size: 26px;
+	color: #000;
+}
+section.production-control .bootstrap-select.btn-group .dropdown-toggle .caret {
+    top: 16px;
+}
+section.production-control .bootstrap-select.btn-group .bs-caret {
+}
+
+section.production-control .dropdown-menu > li > a {
+	font-size: 26px;
+}
+section.production-control .dropdown-menu > li > a:focus,
+section.production-control .dropdown-menu > li > a:hover {
+	background-color: #72bd00;
+	color: #000000;
+}
 
 
 
