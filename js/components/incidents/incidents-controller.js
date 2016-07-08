@@ -1,6 +1,7 @@
 app.controller('IncidentsController', ['$scope', '$http', function($scope, $http) {  
 
 	$("header nav").attr("class", "incidents");
+    $('select').selectpicker({});
 
 	var apiUrl = 'web-service/Get_IncidencesResult.json';
 

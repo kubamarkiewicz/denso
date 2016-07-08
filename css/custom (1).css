@@ -60,65 +60,6 @@ a:focus, a:active {
 /* Forms                                       */
 /***********************************************/
 
-label {
-	text-transform: uppercase;
-	font-weight: normal;
-}
-
-.form-control {
-	border-radius: 0;
-}
-
-.bootstrap-select {
-	display: block;
-	float: left;
-	height: 100%;
-	background-color: #00557f;;
-}
-.bootstrap-select > .dropdown-toggle {
-	height: 100%;
-	border: none;
-	background-color: rgba(0,0,0,0);
-	text-transform: uppercase;
-	font-weight: 500;
-	color: #ffffff;
-	font-size: 24px;
-}
-.bootstrap-select.btn-group .dropdown-menu {
-	border-radius: 0;
-}
-.bootstrap-select.btn-group .dropdown-toggle .caret {
-	border-top: 18px dashed #ffffff !important;
-	border-right: 11px solid transparent;
-    border-left: 11px solid transparent;
-    position: absolute;
-    top: 14px;
-    right: 13px;
-    margin-top: 1px;
-}
-.bootstrap-select.btn-group .bs-caret {
-    border-left: 1px solid #f0f0f0;
-    height: 100%;
-    display: inline-block;
-    width: 50px;
-    right: 0;
-    position: absolute;
-    top: 0;;
-}
-
-.dropdown-menu > li > a {
-	padding-bottom: 10px;
-	padding-top: 10px;
-	font-size: 24px;
-	text-transform: uppercase;
-	font-weight: 500;
-}
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a:hover {
-	background-color: #00557f;
-	color: #ffffff;
-}
-
 /***********************************************/
 /* Layout Divs                                 */
 /***********************************************/
@@ -234,6 +175,52 @@ section.production-control .item time {
 	width: 30%;
 	text-align: center;
 	border-right: 1px solid #f0f0f0;
+}
+section.production-control .item .bootstrap-select {
+	display: block;
+	float: left;
+	width: 70% !important;
+	height: 100%;;
+}
+section.production-control .item .bootstrap-select > .dropdown-toggle {
+	height: 100%;
+	border: none;
+	background-color: rgba(0,0,0,0);
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+section.production-control .item .bootstrap-select.btn-group .dropdown-menu {
+	border-radius: 0;
+}
+section.production-control .item .bootstrap-select.btn-group .dropdown-toggle .caret {
+	border-top: 18px dashed #ffffff !important;
+	border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    margin-top: 1px;
+}
+section.production-control .item .bootstrap-select.btn-group .bs-caret {
+    border-left: 1px solid #f0f0f0;
+    height: 100%;
+    display: inline-block;
+    width: 50px;
+    right: 0;
+    position: absolute;
+    top: 0;;
+}
+section.production-control .item .dropdown-menu > li > a {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+section.production-control .item .dropdown-menu > li > a:focus,
+section.production-control .item .dropdown-menu > li > a:hover {
+	background-color: #7dbd01;
 }
 
 
@@ -374,48 +361,27 @@ section.synoptic #statisitcs .graph-wrap .graph .value {
 /* incidents  		                      */
 	
 section.incidents  {
-	padding: 60px 30px;
+	padding: 60px 80px 60px 440px;
+}	
+section.incidents .table-wrap  {
+	max-height: calc(100vh - 445px);
+	overflow: auto;
 }	
 section.incidents table  {
-	width: 100%;
 }	
-
-section.incidents thead,
-section.incidents tbody,
-section.incidents tr,
-section.incidents td,
-section.incidents th { display: block; }
-
-section.incidents tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
-}
-
-section.incidents tbody {
-	max-height: calc(100vh - 500px);
-    overflow-y: auto;
-}
-
-section.incidents tbody td, 
-section.incidents thead th {
-    width: 33.33%;
-    float: left;
-}
-
+section.incidents table tr {
+}	
 section.incidents table th {
-	width: 33%;
 	text-transform: uppercase;
 	color: #ffffff;
 	background-color: #4b4b4b;
 	font-weight: normal;
-}
-
+}	
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 	border-left: 1px solid #ffffff;
 }	
-
+section.incidents table td {
+}	
 section.incidents table tr.error td {
 	background-color: #c40001;
 	color: #ffffff;
