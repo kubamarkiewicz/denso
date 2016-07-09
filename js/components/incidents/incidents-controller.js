@@ -2,18 +2,17 @@ app.controller('IncidentsController', ['$scope', '$http', function($scope, $http
 
 	$("header nav").attr("class", "incidents");
 
-	var apiUrl = 'web-service/Get_IncidencesResult.json';
+    var apiUrl = 'web-service/Get_Incidences.json';
 
     $scope.data = {};
     $scope.AGVId = "0";
 
     $scope.loadData = function()
     {
-        console.log($scope.AGVId);
         $http({
             method  : 'GET',
             url     : apiUrl,
-            data: {IdAGV: $scope.AGVId}
+            params  : {IdAGV: $scope.AGVId}
          })
         .success(function(data) {
             if (data) {
