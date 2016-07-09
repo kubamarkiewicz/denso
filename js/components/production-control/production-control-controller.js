@@ -1,19 +1,16 @@
-app.controller('ProductionControlController', ['$scope', '$http', function($scope, $http) { 
+app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
 
 	$("header nav").attr("class", "production-control");
 
-    var apiUrl  = 'web-service/Get_Orders.json';
-    var apiUrl2 = 'web-service/Set_Order.json';
-	var apiUrl3 = 'web-service/Get_Destinations.json';
-
     $scope.ordersData = {};
     $scope.destinationsData = {};
+
 
     $scope.loadOrdersData = function()
     {
         $http({
             method  : 'GET',
-            url     : apiUrl
+            url     : $rootScope.settings.webServiceURLs.Get_Orders
          })
         .success(function(data) {
             if (data) {
@@ -22,16 +19,20 @@ app.controller('ProductionControlController', ['$scope', '$http', function($scop
         });
     }
     $scope.loadOrdersData();
-    setInterval(function(){ 
-        $scope.loadOrdersData();
-    }, 1000);
+    $rootScope.clearIntervals();
+    $rootScope.setInterval(function(){
+        if ($('.production-control select:focus').length==0) {
+            $scope.loadOrdersData();
+        };
+    });
+
 
 
     $scope.loadDestinationsData = function()
     {
         $http({
             method  : 'GET',
-            url     : apiUrl3
+            url     : $rootScope.settings.webServiceURLs.Get_Destinations
          })
         .success(function(data) {
             if (data) {
@@ -46,7 +47,7 @@ app.controller('ProductionControlController', ['$scope', '$http', function($scop
     {
         $http({
             method  : 'GET',
-            url     : apiUrl2,
+            url     : $rootScope.settings.webServiceURLs.Set_Order,
             params  : {Time: item.Time, IdDestination: item.IdDestination}
          })
         .success(function(data) {

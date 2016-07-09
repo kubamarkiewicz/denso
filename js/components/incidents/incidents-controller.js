@@ -1,18 +1,15 @@
-app.controller('IncidentsController', ['$scope', '$http', function($scope, $http) {  
+app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {  
 
 	$("header nav").attr("class", "incidents");
 
-    var apiUrl = 'web-service/Get_Incidences.json';
-
     $scope.data = {};
-    $scope.AGVId = "0";
+    $scope.filterAGVId = "0";
 
     $scope.loadData = function()
     {
         $http({
             method  : 'GET',
-            url     : apiUrl,
-            params  : {IdAGV: $scope.AGVId}
+            url     : $rootScope.settings.webServiceURLs.Get_Incidences
          })
         .success(function(data) {
             if (data) {
@@ -22,12 +19,22 @@ app.controller('IncidentsController', ['$scope', '$http', function($scope, $http
                     data.Get_IncidencesResult[i].Time = fixDate(data.Get_IncidencesResult[i].Time);
                 }
 
-                $scope.data = data.Get_IncidencesResult;
+                // filter by AVGId
+                if ($scope.filterAGVId != "0") {
+                    $scope.data = $(data.Get_IncidencesResult).filter(function (i,n){
+                        return n.IdAGV == $scope.filterAGVId;
+                    });
+                }
+                else {
+                    $scope.data = data.Get_IncidencesResult;
+                }
             }
         });
     }
 
     $scope.loadData();
+    $rootScope.clearIntervals();
+    $rootScope.setInterval($scope.loadData);
 
 
     function fixDate(date)

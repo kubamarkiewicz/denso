@@ -1,0 +1,10 @@
+{
+    "dataRefreshTime": 1000,
+    "webServiceURLs": {
+    	"Get_Destinations"	: "web-service/Get_Destinations.json",
+    	"Get_Orders"		: "web-service/Get_Orders.json",
+    	"Set_Order"			: "web-service/Set_Order.json",
+
+    	"Get_Incidences"	: "web-service/Get_Incidences.json"
+    }
+}
