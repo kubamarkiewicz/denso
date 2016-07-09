@@ -1,7 +1,7 @@
 
 	<section class="synoptic">
 
-		<div id="incidencia">[ 1/2 ] - DETECCIÓ ESCANER DAVANTER</div>
+		<div id="incidents" ng-if="incidentsData.length">[ {{ selectedIncidentIndex + 1 }}/{{ incidentsData.length }} ] - {{ incidentsData[selectedIncidentIndex].Message }}</div>
 <!-- 		<div id="statisitcs">
 			<div class="legend">
 				Tiempo

@@ -12,7 +12,7 @@
             "Id": 2,
             "IdAGV": 2,
             "IdError": 3,
-            "Message": "Error n\u00famero 3",
+            "Message": "DETECCIÓ ESCANER DAVANTER",
             "Severity": 1,
             "Time": "\/Date(1467025388169+0200)\/"
         },
@@ -53,7 +53,7 @@
             "IdAGV": 1,
             "IdError": 6,
             "Message": "Error n\u00famero 6",
-            "Severity": 2,
+            "Severity": 1,
             "Time": "\/Date(1467025388158+0200)\/"
         },
         {

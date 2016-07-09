@@ -52,4 +52,45 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
     }
     $scope.loadAGVData();
 
+
+    /* Incidents ***************************/
+
+
+    $scope.incidentsData = [];
+    $scope.selectedIncidentIndex = 0;
+
+    $scope.loadIncidentsData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : $rootScope.settings.webServiceURLs.getIncidents
+         })
+        .success(function(data) {
+            if (data) {
+
+                // filter by severity
+                $scope.incidentsData = $(data.Get_IncidencesResult).filter(function (i,n){
+                    return n.Severity == "1";
+                });
+            }
+        });
+    }
+
+    function loadNextIncident()
+    {
+        if (!$scope.incidentsData.length) {
+            $scope.loadIncidentsData();
+        }
+        else {
+            ++$scope.selectedIncidentIndex;
+            if ($scope.selectedIncidentIndex >= $scope.incidentsData.length) {
+                $scope.selectedIncidentIndex = 0;
+                $scope.loadIncidentsData();
+            }
+        }
+    }
+    loadNextIncident();
+    $rootScope.intervals.push(setInterval(loadNextIncident, 1500));
+
+
 }]);
