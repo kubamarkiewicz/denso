@@ -10,7 +10,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
     {
         $http({
             method  : 'GET',
-            url     : $rootScope.settings.webServiceURLs.Get_Orders
+            url     : $rootScope.settings.webServiceURLs.getOrders
          })
         .success(function(data) {
             if (data) {
@@ -32,7 +32,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
     {
         $http({
             method  : 'GET',
-            url     : $rootScope.settings.webServiceURLs.Get_Destinations
+            url     : $rootScope.settings.webServiceURLs.getDestinations
          })
         .success(function(data) {
             if (data) {
@@ -47,8 +47,8 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
     {
         $http({
             method  : 'GET',
-            url     : $rootScope.settings.webServiceURLs.Set_Order,
-            params  : {Time: item.Time, IdDestination: item.IdDestination}
+            url     : $rootScope.settings.webServiceURLs.setOrder,
+            params  : {Time: item.Time, IdDestination: item.Id}
          })
         .success(function(data) {
             $scope.loadOrdersData();

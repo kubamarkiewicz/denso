@@ -9,7 +9,7 @@ app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function
     {
         $http({
             method  : 'GET',
-            url     : $rootScope.settings.webServiceURLs.Get_Incidences
+            url     : $rootScope.settings.webServiceURLs.getIncidents
          })
         .success(function(data) {
             if (data) {

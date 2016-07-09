@@ -1,10 +1,15 @@
 {
     "dataRefreshTime": 1000,
     "webServiceURLs": {
-    	"Get_Destinations"	: "web-service/Get_Destinations.json",
-    	"Get_Orders"		: "web-service/Get_Orders.json",
-    	"Set_Order"			: "web-service/Set_Order.json",
+    	"getDestinations"	: "web-service/get_destinations.json",
+    	"getOrders"			: "web-service/get_orders.json",
+    	"setOrder"			: "web-service/set_order.json",
 
-    	"Get_Incidences"	: "web-service/Get_Incidences.json"
+    	"getTags"			: "web-service/get_tags.json",
+    	"setTag"			: "web-service/set_tag.json",
+    	"deleteTag"			: "web-service/delete_tag.json",
+    	"getAGVPositions"	: "web-service/get_agv_positions.php",
+
+    	"getIncidents"		: "web-service/get_incidents.json"
     }
 }

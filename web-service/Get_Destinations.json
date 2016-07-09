@@ -1,28 +1,28 @@
 {
     "Get_DestinationsResult": [
         {
-            "IdDestination": "Almacen"
+            "Id": "Almacen"
         },
         {
-            "IdDestination": "MTR3"
+            "Id": "MTR3"
         },
         {
-            "IdDestination": "BPC"
+            "Id": "BPC"
         },
         {
-            "IdDestination": "TPMS"
+            "Id": "TPMS"
         },
         {
-            "IdDestination": "AC 3.4"
+            "Id": "AC 3.4"
         },
         {
-            "IdDestination": "ENG 4"
+            "Id": "ENG 4"
         },
         {
-            "IdDestination": "ENG 5"
+            "Id": "ENG 5"
         },
         {
-            "IdDestination": "ENG 10"
+            "Id": "ENG 10"
         }
     ]
 }

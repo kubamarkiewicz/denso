@@ -1,0 +1,14 @@
+{
+    "Get_AGVS_PositionsResult": {
+        "1": {
+            "Id":1,
+            "IdTag":2,
+            "Status":1
+        },        
+        "2": {
+            "Id":2,
+            "IdTag":4,
+            "Status":1
+        }
+    }
+}

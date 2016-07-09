@@ -1,6 +1,6 @@
 
 	<section class="synoptic">
-
+<!-- 
 		<div id="incidencia">[ 1/2 ] - DETECCIÓ ESCANER DAVANTER</div>
 		<div id="statisitcs">
 			<div class="legend">
@@ -32,13 +32,14 @@
 				</div>
 			</div>
 		</div>
-		
+		 -->
 		<div id="mapa">
-			<div class="agv" id="agv-1" style="transform: translate(17%, 75%);">
-				<span>1</span>
-			</div>
-			<div class="agv vertical" id="agv-2" style="transform: translate(66.5%, 70%)">
-				<span>2</span>
+			<div 
+				ng-repeat="agv in AGVData"  
+				id="agv-{{ agv.Id }}"
+				class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].isVertical ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
+				style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].x }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].y }}%);">
+				<span>{{ agv.Id }}</span>
 			</div>
 			<img src="mapa/mapa.png" alt="" />
 		</div>

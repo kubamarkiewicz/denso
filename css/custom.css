@@ -238,7 +238,7 @@ section.synoptic .agv {
     width: 100%;
     height: 100%;
     visibility: hidden;
-    transition: transform 0.5s ease-out;
+    transition: transform 1s ease-out;
 }
 section.synoptic .agv span {
 	position: absolute;
@@ -254,14 +254,12 @@ section.synoptic .agv span {
 	border-radius: 8px;
 	transform: translate(-50%, -50%);
 	transform-origin: 0 0;
+	background-color: #72bd00;
 }
 section.synoptic .agv.vertical span {
 	transform: rotate(90deg) translate(-50%, -50%);
 }
-section.synoptic .agv#agv-1 span {
-	background-color: #72bd00;
-}
-section.synoptic .agv#agv-2 span {
+section.synoptic .agv.error span {
 	background-color: #c50016;
 }
 
