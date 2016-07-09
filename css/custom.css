@@ -222,14 +222,11 @@ section.synoptic  {
 }	
 section.synoptic #mapa {
 	position: relative;
-	display: block;
-	height: auto;
+	display: inline-block;
 	overflow: hidden;
 }
 section.synoptic #mapa img {
 	display: block;
-	width: 100%;
-	height: auto;
 	max-height: calc(100vh - 320px);
 }
 section.synoptic .agv {
