@@ -4,6 +4,8 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
 
     $scope.ordersData = {};
     $scope.destinationsData = {};
+    
+    $rootScope.clearIntervals();
 
 
     $scope.loadOrdersData = function()
@@ -19,7 +21,6 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
         });
     }
     $scope.loadOrdersData();
-    $rootScope.clearIntervals();
     $rootScope.setInterval(function(){
         if ($('.production-control select:focus').length==0) {
             $scope.loadOrdersData();

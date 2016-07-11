@@ -16,6 +16,10 @@ app.config(function ($routeProvider) {
         .when('/incidents', { 
             controller: 'IncidentsController', 
             templateUrl: 'js/components/incidents/index.html' 
+        })       
+        .when('/tags', { 
+            controller: 'TagsController', 
+            templateUrl: 'js/components/tags/index.html' 
         })      
 
         .otherwise({ 

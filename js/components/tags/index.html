@@ -1,0 +1,17 @@
+
+	<section class="tags">
+		
+		<div id="mapa">
+			<div class="tags">
+				<div 
+					ng-repeat="tag in tagsData"  
+					id="tag-{{ tag.Id }}"
+					class="tag" 
+					style="transform: translate({{ tag.x }}%, {{ tag.y }}%);">
+					<span>{{ tag.Id }}</span>
+				</div>
+			</div>
+			<img src="mapa/mapa.png" alt="" />
+		</div>
+
+	</section>

@@ -5,6 +5,8 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
 	$scope.tagsData = {};
     $scope.AGVData = {};
 	$scope.AGVPositionsData = {};
+    
+    $rootScope.clearIntervals();
 
 
 	$scope.loadTagsData = function()
@@ -34,7 +36,6 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
         });
     }
     $scope.loadAGVPositionsData();
-    $rootScope.clearIntervals();
     $rootScope.setInterval($scope.loadAGVPositionsData);
 
 

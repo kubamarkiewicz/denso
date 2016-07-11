@@ -4,6 +4,8 @@ app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function
 
     $scope.data = {};
     $scope.filterAGVId = "0";
+    
+    $rootScope.clearIntervals();
 
     $scope.loadData = function()
     {
@@ -33,7 +35,6 @@ app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function
     }
 
     $scope.loadData();
-    $rootScope.clearIntervals();
     $rootScope.setInterval($scope.loadData);
 
 
