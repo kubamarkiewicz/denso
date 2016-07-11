@@ -2,7 +2,7 @@
 	<section class="synoptic">
 
 		<div id="incidents" ng-if="incidentsData.length">[ {{ selectedIncidentIndex + 1 }}/{{ incidentsData.length }} ] - {{ incidentsData[selectedIncidentIndex].Message }}</div>
-<!-- 		<div id="statisitcs">
+		<div id="statisitcs">
 			<div class="legend">
 				Tiempo
 				<span class="item"><span class="square color-1"></span>trabajo</span>
@@ -11,28 +11,18 @@
 				<span class="item"><span class="square color-4"></span>averia</span>
 				<span class="item"><span class="square color-5"></span>fuera de uso</span>
 			</div>
-			<div class="graph-wrap">
-				<div class="title">AGV 1</div>
+			<div class="graph-wrap" ng-repeat="(IdAGV, statistics) in statisticsData">
+				<div class="title">AGV {{ IdAGV }}</div>
 				<div class="graph">
-					<div class="value color-1" style="width:50%">50%</div>
-					<div class="value color-2" style="width:20%">20%</div>
-					<div class="value color-3" style="width:10%">10%</div>
-					<div class="value color-4" style="width:15%">15%</div>
-					<div class="value color-5" style="width:5%">5%</div>
-				</div>
-			</div>
-			<div class="graph-wrap">
-				<div class="title">AGV 2</div>
-				<div class="graph">
-					<div class="value color-1" style="width:45%">45%</div>
-					<div class="value color-2" style="width:20%">20%</div>
-					<div class="value color-3" style="width:15%">15%</div>
-					<div class="value color-4" style="width:10%">10%</div>
-					<div class="value color-5" style="width:10%">10%</div>
+					<div class="value color-1" style="width:{{ statistics.Trabajo }}%">{{ statistics.Trabajo }}%</div>
+					<div class="value color-2" style="width:{{ statistics.ParoProduccion }}%">{{ statistics.ParoProduccion }}%</div>
+					<div class="value color-3" style="width:{{ statistics.ParoEscaner }}%">{{ statistics.ParoEscaner }}%</div>
+					<div class="value color-4" style="width:{{ statistics.Averia }}%">{{ statistics.Averia }}%</div>
+					<div class="value color-5" style="width:{{ statistics.FueraDeUso }}%">{{ statistics.FueraDeUso }}%</div>
 				</div>
 			</div>
 		</div>
-		 -->
+		
 		<div id="mapa">
 			<div 
 				ng-repeat="agv in AGVData"  

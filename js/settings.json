@@ -4,12 +4,11 @@
     	"getDestinations"	: "web-service/get_destinations.json",
     	"getOrders"			: "web-service/get_orders.json",
     	"setOrder"			: "web-service/set_order.json",
-
     	"getTags"			: "web-service/get_tags.json",
     	"setTag"			: "web-service/set_tag.json",
     	"deleteTag"			: "web-service/delete_tag.json",
-    	"getAGVPositions"	: "web-service/get_agv_positions.php",
-
+        "getAGVPositions"   : "web-service/get_agv_positions.php",
+    	"getAGVStatistics"	: "web-service/get_agv_statistics.json",
     	"getIncidents"		: "web-service/get_incidents.json"
     }
 }

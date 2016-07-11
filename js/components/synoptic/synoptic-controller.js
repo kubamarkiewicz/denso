@@ -53,6 +53,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
     $scope.loadAGVData();
 
 
+
     /* Incidents ***************************/
 
 
@@ -93,4 +94,28 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
     $rootScope.intervals.push(setInterval(loadNextIncident, 1500));
 
 
+
+
+
+
+
+    /* Statisitcs ***************************/
+
+    $scope.statisticsData = [];
+    
+    $scope.loadStatisticsData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : $rootScope.settings.webServiceURLs.getAGVStatistics
+         })
+        .success(function(data) {
+            if (data) {
+                $scope.statisticsData = data.Get_AGVS_StatisitcsResult;
+            }
+        });
+    }
+    $scope.loadStatisticsData();
+    $rootScope.setInterval($scope.loadStatisticsData);
+    
 }]);

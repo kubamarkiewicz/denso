@@ -1,0 +1,18 @@
+{
+    "Get_AGVS_StatisitcsResult": {
+        "1": {
+            "Trabajo":50,
+            "ParoProduccion":20,
+            "ParoEscaner":10,
+            "Averia":15,
+            "FueraDeUso":5
+        },        
+        "2": {
+            "Trabajo":45,
+            "ParoProduccion":30,
+            "ParoEscaner":10,
+            "Averia":5,
+            "FueraDeUso":10
+        }
+    }
+}
