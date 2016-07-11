@@ -1,5 +1,7 @@
 
 	<section class="tags">
+
+		<aside>aside</aside>
 		
 		<div id="mapa">
 			<div class="tags">
@@ -8,7 +10,7 @@
 					id="tag-{{ tag.Id }}"
 					class="tag" 
 					style="transform: translate({{ tag.x }}%, {{ tag.y }}%);">
-					<span>{{ tag.Id }}</span>
+					<span ng-click="selectTag()">{{ tag.Id }}</span>
 				</div>
 			</div>
 			<img src="mapa/mapa.png" alt="" />

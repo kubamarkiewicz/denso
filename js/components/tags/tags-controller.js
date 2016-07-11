@@ -22,6 +22,12 @@ app.controller('TagsController', ['$scope', '$rootScope', '$http', function($sco
     $scope.loadTagsData();
 
 
+    $scope.selectTag = function()
+    {
+        
+    }
+
+
 
 
 
