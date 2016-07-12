@@ -27,8 +27,8 @@
 			<div 
 				ng-repeat="agv in AGVData"  
 				id="agv-{{ agv.Id }}"
-				class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].isVertical ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
-				style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].x }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].y }}%);">
+				class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].IsVertical ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
+				style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].X }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].Y }}%);">
 				<span>{{ agv.Id }}</span>
 			</div>
 			<img src="mapa/mapa.png" alt="" />

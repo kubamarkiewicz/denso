@@ -9,8 +9,7 @@
 				
 					<div class="item" ng-class="{empty: order.IdDestination==''}" ng-repeat="order in ordersData.slice($index, ($index+10 > ordersData.length ?  ordersData.length : $index+10))">
 						<time>{{ order.Time }}</time>
-						<select ng-options="item.Id as item.Id for item in destinationsData" ng-model="order.IdDestination" ng-change="setOrder(order)">	
-							<option value="">- sin uso -</option>
+						<select ng-options="item.Id as item.Name for item in destinationsData" ng-model="order.IdDestination" ng-change="setOrder(order)">	
 						</select>
 					</div><!-- /.item -->
 				

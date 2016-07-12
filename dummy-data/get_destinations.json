@@ -1,0 +1,53 @@
+{
+  "Get_Order_DestinationsResult": [
+    {
+      "Id": 0,
+      "Name": "Sin Uso"
+    },
+    {
+      "Id": 1,
+      "Name": "ENG 10"
+    },
+    {
+      "Id": 2,
+      "Name": "ENG 4"
+    },
+    {
+      "Id": 3,
+      "Name": "ENG 5"
+    },
+    {
+      "Id": 4,
+      "Name": "ENG 8"
+    },
+    {
+      "Id": 5,
+      "Name": "AC 1.2"
+    },
+    {
+      "Id": 6,
+      "Name": "AC 3.4"
+    },
+    {
+      "Id": 7,
+      "Name": "DL"
+    },
+    {
+      "Id": 8,
+      "Name": "PM"
+    },
+    {
+      "Id": 9,
+      "Name": "TPMS"
+    },
+    {
+      "Id": 10,
+      "Name": "BPC"
+    },
+    {
+      "Id": 11,
+      "Name": "MTR 3"
+    }
+  ]
+}
+

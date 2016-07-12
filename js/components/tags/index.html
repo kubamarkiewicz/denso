@@ -1,18 +1,83 @@
 
-	<section class="tags">
+	<section class="tags" ng-class="{'edit': selectedTag}">
 
-		<aside>aside</aside>
+		<aside ng-if="!selectedTag">
+			<button class="btn btn-default" ng-click="addTag()"><span class="glyphicon glyphicon-plus"></span> Add tag</button>
+			<br>
+			<br>
+			<p class="help-block">or Click any tag to edit it</p>
+		</aside>
+		<aside ng-if="selectedTag" class="edit">
+
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="btn btn-primary" class="save" ng-click="saveTag()"><span class="glyphicon glyphicon-ok"></span> Save</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="btn btn-link" class="cancel" ng-click="cancelEditting()">Cancel</div>
+				</div>
+			</div>	
+
+			<br>
+
+			<h3>Edit tag</h3>
+
+			<div class="form-group">
+    			<label>ID</label>
+    			<input type="text" class="form-control" ng-model="selectedTag.Id">
+			</div>
+
+			<div class="form-group">
+	    		<label>x</label>
+	   			<div class="input-group">
+					<input type="text" class="form-control" ng-model="selectedTag.X">
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+	    		<label>y</label>
+	   			<div class="input-group">
+					<input type="text" class="form-control" ng-model="selectedTag.Y">
+					<div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<p class="help-block">Click on the map to change tag's position</p>
+
+			<div class="radio">
+				<label>
+					<input type="radio" name="IsVertical" ng-model="selectedTag.IsVertical" ng-value="0">
+					horizontal
+				</label>
+			</div>
+
+			<div class="radio">
+				<label>
+					<input type="radio" name="IsVertical" ng-model="selectedTag.IsVertical" ng-value="1">
+					vertical
+				</label>
+			</div>
+
+			<div class="text-right">
+				<div class="btn btn-link" ng-click="deleteTag()"><span class="glyphicon glyphicon-trash"></span></div>
+			</div>
+
+
+		</aside>
 		
 		<div id="mapa">
 			<div class="tags">
 				<div 
 					ng-repeat="tag in tagsData"  
-					id="tag-{{ tag.Id }}"
+					ng-attr-id="tag-{{ tag.Id }}"
+					ng-attr-data-id="{{ tag.Id }}"
 					class="tag" 
-					style="transform: translate({{ tag.x }}%, {{ tag.y }}%);">
-					<span ng-click="selectTag()">{{ tag.Id }}</span>
+					ng-class="{'selected':selectedTag.Id==tag.Id}"
+					style="transform: translate({{ tag.X }}%, {{ tag.Y }}%);">
+					<span ng-click="onTagClick($event)">{{ tag.Id }}</span>
 				</div>
 			</div>
+			<div class="map-overlay" ng-click="onOverlayClick($event)"></div>
 			<img src="mapa/mapa.png" alt="" />
 		</div>
 

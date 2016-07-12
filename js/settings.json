@@ -1,14 +1,14 @@
 {
     "dataRefreshTime": 1000,
     "webServiceURLs": {
-    	"getDestinations"	: "web-service/get_destinations.json",
-    	"getOrders"			: "web-service/get_orders.json",
-    	"setOrder"			: "web-service/set_order.json",
-    	"getTags"			: "web-service/get_tags.json",
-    	"setTag"			: "web-service/set_tag.json",
-    	"deleteTag"			: "web-service/delete_tag.json",
-        "getAGVPositions"   : "web-service/get_agv_positions.php",
-    	"getAGVStatistics"	: "web-service/get_agv_statistics.json",
-    	"getIncidents"		: "web-service/get_incidents.json"
+    	"getDestinations"	: "dummy-data/get_destinations.json",
+    	"getOrders"			: "dummy-data/get_orders.json?v=2",
+    	"setOrder"			: "dummy-data/set_order.json",
+    	"getTags"			: "dummy-data/get_tags.json",
+    	"setTag"			: "dummy-data/set_tag.json",
+    	"deleteTag"			: "dummy-data/delete_tag.json",
+        "getAGVPositions"   : "dummy-data/get_agv_positions.json",
+    	"getAGVStatistics"	: "dummy-data/get_agv_statistics.json",
+    	"getIncidents"		: "dummy-data/get_incidents.json"
     }
 }

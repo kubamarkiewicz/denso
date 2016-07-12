@@ -18,6 +18,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
             if (data) {
                 $scope.ordersData = data.Get_OrdersResult;
             }
+            console.log($scope.ordersData);
         });
     }
     $scope.loadOrdersData();
@@ -37,7 +38,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
          })
         .success(function(data) {
             if (data) {
-                $scope.destinationsData = data.Get_DestinationsResult;
+                $scope.destinationsData = data.Get_Order_DestinationsResult;
             }
         });
     }
