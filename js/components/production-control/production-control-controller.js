@@ -23,7 +23,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
     $scope.loadOrdersData();
     $rootScope.setInterval(function(){
         if ($('.production-control select:focus').length==0) {
-            // $scope.loadOrdersData();
+            $scope.loadOrdersData();
         };
     });
 
