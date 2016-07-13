@@ -7,6 +7,9 @@ app.controller('TagsController', ['$scope', '$rootScope', '$http', function($sco
     $scope.tagsData = {};
     $scope.selectedTag = null;
 
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) $scope.cancelEditting();   // escape
+    });
 
     $scope.loadTagsData = function()
     {
@@ -33,6 +36,7 @@ app.controller('TagsController', ['$scope', '$rootScope', '$http', function($sco
     {
         $scope.selectedTag = null;
         delete $scope.tagsData['new'];
+        $scope.loadTagsData();
     }
 
     $scope.saveTag = function()

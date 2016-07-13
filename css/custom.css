@@ -232,7 +232,7 @@ section.production-control .item {
 }
 section.production-control .item select {
 	line-height: 40px;
-	width: 70%;
+	width: 61%;
 	background-color: transparent;
 	color: #000000;
 }
@@ -244,10 +244,11 @@ section.production-control .item.empty {
 }
 section.production-control .item time {
 	float: left;
-	text-align: center;
+	text-align: left;
 	border-right: 1px solid #f0f0f0;
 	display: inline-block;
-	width: 30%;
+	width: 39%;
+	padding-left: 13px;
 }
 
 
@@ -487,6 +488,7 @@ section.tags .tag {
     height: 100%;
     transition: transform 0.1s ease-out;
     z-index: 2;
+    visibility: hidden;
 }
 section.tags .tag span {
 	position: absolute;
@@ -504,6 +506,7 @@ section.tags .tag span {
 	padding: 0;
 	cursor: pointer;
 	text-align: center;
+	visibility: visible;
 }
 section.tags .tag.selected span {
 	background-color: #72bd00;

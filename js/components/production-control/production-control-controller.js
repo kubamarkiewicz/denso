@@ -18,13 +18,12 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
             if (data) {
                 $scope.ordersData = data.Get_OrdersResult;
             }
-            console.log($scope.ordersData);
         });
     }
     $scope.loadOrdersData();
     $rootScope.setInterval(function(){
         if ($('.production-control select:focus').length==0) {
-            $scope.loadOrdersData();
+            // $scope.loadOrdersData();
         };
     });
 

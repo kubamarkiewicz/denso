@@ -2,11 +2,11 @@
     "dataRefreshTime": 1000,
     "webServiceURLs": {
     	"getDestinations"	: "dummy-data/get_destinations.json",
-    	"getOrders"			: "dummy-data/get_orders.json?v=2",
+    	"getOrders"			: "dummy-data/get_orders.json",
     	"setOrder"			: "dummy-data/set_order.json",
     	"getTags"			: "dummy-data/get_tags.json",
-    	"setTag"			: "dummy-data/set_tag.json",
-    	"deleteTag"			: "dummy-data/delete_tag.json",
+    	"setTag"			: "dummy-data/set_tag.php",
+    	"deleteTag"			: "dummy-data/delete_tag.php",
         "getAGVPositions"   : "dummy-data/get_agv_positions.json",
     	"getAGVStatistics"	: "dummy-data/get_agv_statistics.json",
     	"getIncidents"		: "dummy-data/get_incidents.json"
