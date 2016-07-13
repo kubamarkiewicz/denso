@@ -40,7 +40,7 @@ app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function
 
     function fixDate(date)
     {
-        return new Date(parseInt(date.slice(6, -2))).toISOString().substring(0, 19).replace('T', ' ');
+        return new Date(parseInt(date.slice(6, -2)) + 2*60*60*1000).toISOString().substring(0, 19).replace('T', ' ');
     }
 
 }]);

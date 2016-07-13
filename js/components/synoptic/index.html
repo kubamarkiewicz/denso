@@ -14,11 +14,11 @@
 			<div class="graph-wrap" ng-repeat="(IdAGV, statistics) in statisticsData">
 				<div class="title">AGV {{ IdAGV }}</div>
 				<div class="graph">
-					<div class="value color-1" style="width:{{ statistics.Trabajo }}%">{{ statistics.Trabajo }}%</div>
-					<div class="value color-2" style="width:{{ statistics.ParoProduccion }}%">{{ statistics.ParoProduccion }}%</div>
-					<div class="value color-3" style="width:{{ statistics.ParoEscaner }}%">{{ statistics.ParoEscaner }}%</div>
-					<div class="value color-4" style="width:{{ statistics.Averia }}%">{{ statistics.Averia }}%</div>
-					<div class="value color-5" style="width:{{ statistics.FueraDeUso }}%">{{ statistics.FueraDeUso }}%</div>
+					<div class="value color-1" style="width:{{ statistics.Working }}%">{{ statistics.Working }}%</div>
+					<div class="value color-2" style="width:{{ statistics.Stoped }}%">{{ statistics.Stoped }}%</div>
+					<div class="value color-3" style="width:{{ statistics.Scanner }}%">{{ statistics.Scanner }}%</div>
+					<div class="value color-4" style="width:{{ statistics.Fault }}%">{{ statistics.Fault }}%</div>
+					<div class="value color-5" style="width:{{ statistics.Offline }}%">{{ statistics.Offline }}%</div>
 				</div>
 			</div>
 		</div>
@@ -28,13 +28,14 @@
 				<div 
 					ng-repeat="agv in AGVData"  
 					id="agv-{{ agv.Id }}"
-					class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].IsVertical == 1 ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
+					class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].IsVertical == 1 ? 'vertical' : '' }}  {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }} {{ AGVPositionsData[agv.Id].Status=='3' ? 'moving' : '' }}" 
 					style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].X }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].Y }}%);
-					z-index:{{ AGVzIndex == 'asc' ? agv.Id : 100-agv.Id }}">
+					z-index:{{ AGVzIndex == 'asc' ? agv.Id : 100-agv.Id }}"
+					ng-if="tagsData[AGVPositionsData[agv.Id].IdTag].Id">
 					<span>{{ agv.Id }}</span>
 				</div>
 			</div>
 			<img src="mapa/mapa.png" alt="" />
-		</div>
+		</div> 
 
 	</section>

@@ -1,18 +1,1 @@
-{
-    "Get_AGVS_StatisitcsResult": {
-        "1": {
-            "Trabajo":50,
-            "ParoProduccion":20,
-            "ParoEscaner":10,
-            "Averia":15,
-            "FueraDeUso":5
-        },        
-        "2": {
-            "Trabajo":45,
-            "ParoProduccion":30,
-            "ParoEscaner":10,
-            "Averia":5,
-            "FueraDeUso":10
-        }
-    }
-}
+{"Get_AGVS_OccupationResult":[{"Fault":3,"IdAGV":1,"Offline":2,"Scanner":5,"Stoped":40,"Working":50},{"Fault":6,"IdAGV":2,"Offline":4,"Scanner":10,"Stoped":20,"Working":60}]}

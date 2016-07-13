@@ -32,9 +32,10 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
          })
         .success(function(data) {
             if (data) {
+                data = data.Get_AGVS_PositionsResult;
                 $scope.AGVPositionsData = {};
-                for (i in data.Get_AGVS_PositionsResult) {
-                    $scope.AGVPositionsData[data.Get_AGVS_PositionsResult[i].Id] = data.Get_AGVS_PositionsResult[i];
+                for (i in data) {
+                    $scope.AGVPositionsData[data[i].Id] = data[i];
                 }
             }
         });
@@ -83,7 +84,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
 
                 // filter by severity
                 $scope.incidentsData = $(data.Get_IncidencesResult).filter(function (i,n){
-                    return n.Severity == "1";
+                    return n.Severity == "0";
                 });
             }
         });
@@ -113,7 +114,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
 
     /* Statisitcs ***************************/
 
-    $scope.statisticsData = [];
+    $scope.statisticsData = {};
     
     $scope.loadStatisticsData = function()
     {
@@ -123,7 +124,11 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
          })
         .success(function(data) {
             if (data) {
-                $scope.statisticsData = data.Get_AGVS_StatisitcsResult;
+                data = data.Get_AGVS_OccupationResult;
+                $scope.statisticsData = {};
+                for (i in data) {
+                    $scope.statisticsData[data[i].IdAGV] = data[i];
+                }
             }
         });
     }

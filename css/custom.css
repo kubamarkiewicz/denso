@@ -305,6 +305,9 @@ section.synoptic .agv.vertical span {
 section.synoptic .agv.error span {
 	background-color: #c50016;
 }
+section.synoptic .agv.moving span {
+	box-shadow: 5px 4px 1px 0px rgba(0,0,0,0.55);
+}
 
 
 section.synoptic #incidents {
@@ -425,7 +428,7 @@ section.incidents thead th {
 }
 
 section.incidents table th {
-	width: 33%;
+	width: 32.88%;
 	text-transform: uppercase;
 	color: #ffffff;
 	background-color: #4b4b4b;
@@ -438,6 +441,10 @@ section.incidents table th {
 
 section.incidents table tr.error td {
 	background-color: #c40001;
+	color: #ffffff;
+}	
+section.incidents table tr.warning td {
+	background-color: #ff7e00;
 	color: #ffffff;
 }	
 
