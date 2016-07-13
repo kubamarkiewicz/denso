@@ -84,7 +84,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
 
                 // filter by severity
                 $scope.incidentsData = $(data.Get_IncidencesResult).filter(function (i,n){
-                    return n.Severity == "0";
+                    return (n.Severity == "1" || n.Severity == "2");
                 });
             }
         });
