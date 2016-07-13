@@ -5,7 +5,8 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
 	$scope.tagsData = {};
     $scope.AGVData = {};
 	$scope.AGVPositionsData = {};
-    
+    $scope.AGVzIndex = 'asc';
+
     $rootScope.clearIntervals();
 
 
@@ -55,6 +56,13 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
         });
     }
     $scope.loadAGVData();
+
+
+    // toggle AGV z-index
+    $scope.toggleAGVzIndex = function() {
+        $scope.AGVzIndex = ($scope.AGVzIndex == 'asc' ? 'desc' : 'asc');
+    }
+    $rootScope.setInterval($scope.toggleAGVzIndex);
 
 
 

@@ -271,6 +271,9 @@ section.synoptic #mapa img {
 	max-height: calc(100vh - 320px);
 	max-width: 100%;
 }
+section.synoptic .agvs {
+    z-index: 2;
+}
 section.synoptic .agv {
     position: absolute;
     z-index: 10;
@@ -278,7 +281,6 @@ section.synoptic .agv {
     height: 100%;
     visibility: hidden;
     transition: transform 1s ease-out;
-    z-index: 2;
 }
 section.synoptic .agv span {
 	position: absolute;

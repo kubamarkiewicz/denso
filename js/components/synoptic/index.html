@@ -24,14 +24,18 @@
 		</div>
 		
 		<div id="mapa">
-			<div 
-				ng-repeat="agv in AGVData"  
-				id="agv-{{ agv.Id }}"
-				class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].IsVertical ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
-				style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].X }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].Y }}%);">
-				<span>{{ agv.Id }}</span>
+			<div class="agvs">
+				<div 
+					ng-repeat="agv in AGVData"  
+					id="agv-{{ agv.Id }}"
+					class="agv {{ tagsData[AGVPositionsData[agv.Id].IdTag].IsVertical ? 'vertical' : '' }} {{ AGVPositionsData[agv.Id].Status=='2' ? 'error' : '' }}" 
+					style="transform: translate({{ tagsData[AGVPositionsData[agv.Id].IdTag].X }}%, {{ tagsData[AGVPositionsData[agv.Id].IdTag].Y }}%);
+					z-index:{{ AGVzIndex == 'asc' ? agv.Id : 100-agv.Id }}">
+					<span>{{ agv.Id }}</span>
+				</div>
 			</div>
 			<img src="mapa/mapa.png" alt="" />
 		</div>
+		{{ AGVzIndex }}
 
 	</section>
