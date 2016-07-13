@@ -297,6 +297,7 @@ section.synoptic .agv span {
 	transform: translate(-50%, -50%);
 	transform-origin: 0 0;
 	background-color: #72bd00;
+	box-shadow: 0 0 5px 0px rgba(0,0,0,0.15);
 }
 section.synoptic .agv.vertical span {
 	transform: rotate(90deg) translate(-50%, -50%);
