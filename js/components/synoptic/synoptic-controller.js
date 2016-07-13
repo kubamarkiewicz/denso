@@ -31,7 +31,10 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
          })
         .success(function(data) {
             if (data) {
-                $scope.AGVPositionsData = data.Get_AGVS_PositionsResult;
+                $scope.AGVPositionsData = {};
+                for (i in data.Get_AGVS_PositionsResult) {
+                    $scope.AGVPositionsData[data.Get_AGVS_PositionsResult[i].Id] = data.Get_AGVS_PositionsResult[i];
+                }
             }
         });
     }

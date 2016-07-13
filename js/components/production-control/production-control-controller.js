@@ -49,7 +49,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
         $http({
             method  : 'GET',
             url     : $rootScope.settings.webServiceURLs.setOrder,
-            params  : {Time: item.Time, IdDestination: item.Id}
+            params  : {Time: item.Time, IdDestination: item.IdDestination}
          })
         .success(function(data) {
             $scope.loadOrdersData();
