@@ -302,11 +302,18 @@ section.synoptic .agv span {
 section.synoptic .agv.vertical span {
 	transform: rotate(90deg) translate(-50%, -50%);
 }
-section.synoptic .agv.error span {
+section.synoptic .agv.status-2 span {
 	background-color: #c50016;
 }
-section.synoptic .agv.moving span {
-	box-shadow: 5px 4px 1px 0px rgba(0,0,0,0.55);
+section.synoptic .agv.status-3 span {
+	box-shadow: 0px 0 15px 1px rgba(0,0,0,0.65);
+}
+section.synoptic .agv.status-4 span {
+	background-color: #ff7e00;
+}
+section.synoptic .agv.status-5 span {
+	background-color: #bcb9b9;
+	color:#000000;
 }
 
 
