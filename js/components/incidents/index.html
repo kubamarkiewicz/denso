@@ -26,7 +26,7 @@
 							</tr>
 					    </thead>
 					    <tbody>
-						    <tr ng-repeat="item in data | orderBy: 'Time':true" ng-class="{error: item.Severity==1, warning: item.Severity==2}">
+						    <tr ng-repeat="item in data | orderBy: 'Time' : true" ng-class="{error: item.Severity==1, warning: item.Severity==2}">
 								<td>{{ item.Time }} </td>
 								<td>{{ item.Message }}</td>
 								<td class="text-center">{{ item.IdAGV }}</td>

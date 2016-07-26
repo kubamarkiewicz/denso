@@ -1,11 +1,11 @@
-app.controller('SynopticController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
+app.controller('SynopticController', ['$scope', '$rootScope', '$http', 'ArtisterilIntervalService', function($scope, $rootScope, $http, ArtisterilIntervalService) { 
 	
-	$scope.tagsData = {};
-    $scope.AGVData = {};
-	$scope.AGVPositionsData = {};
+	$scope.tagsData = [];
+    $scope.AGVData = [];
+	$scope.AGVPositionsData = [];
     $scope.AGVzIndex = 'asc';
 
-    $rootScope.clearIntervals();
+    ArtisterilIntervalService.clearIntervals();
 
 
 	$scope.loadTagsData = function()
@@ -39,7 +39,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
         });
     }
     $scope.loadAGVPositionsData();
-    $rootScope.setInterval($scope.loadAGVPositionsData);
+    ArtisterilIntervalService.setInterval($scope.loadAGVPositionsData);
 
 
     $scope.loadAGVData = function()
@@ -61,7 +61,7 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
     $scope.toggleAGVzIndex = function() {
         $scope.AGVzIndex = ($scope.AGVzIndex == 'asc' ? 'desc' : 'asc');
     }
-    $rootScope.setInterval($scope.toggleAGVzIndex);
+    ArtisterilIntervalService.setInterval($scope.toggleAGVzIndex);
 
 
 
@@ -84,11 +84,12 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
                 $scope.incidentsData = $(data.Get_IncidencesResult).filter(function (i,n){
                     return (n.Severity == "1" || n.Severity == "2");
                 });
+
             }
         });
     }
 
-    function loadNextIncident()
+    function showNextIncident()
     {
         if (!$scope.incidentsData.length) {
             $scope.loadIncidentsData();
@@ -101,8 +102,8 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
             }
         }
     }
-    loadNextIncident();
-    $rootScope.intervals.push(setInterval(loadNextIncident, 1500));
+    showNextIncident();
+    ArtisterilIntervalService.setInterval(showNextIncident, $rootScope.settings.incidentShowTime);
 
 
 
@@ -131,6 +132,6 @@ app.controller('SynopticController', ['$scope', '$rootScope', '$http', function(
         });
     }
     $scope.loadStatisticsData();
-    $rootScope.setInterval($scope.loadStatisticsData);
+    ArtisterilIntervalService.setInterval($scope.loadStatisticsData);
     
 }]);

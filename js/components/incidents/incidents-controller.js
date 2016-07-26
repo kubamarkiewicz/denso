@@ -1,13 +1,13 @@
-app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {  
+app.controller('IncidentsController', ['$scope', '$rootScope', '$http', 'ArtisterilIntervalService', function($scope, $rootScope, $http, ArtisterilIntervalService) {  
 
     $("header nav a").removeClass("selected");
     $("header nav a.incidents").addClass("selected");
 
 
-    $scope.data = {};
+    $scope.data = [];
     $scope.filterAGVId = "0";
     
-    $rootScope.clearIntervals();
+    ArtisterilIntervalService.clearIntervals();
 
     $scope.loadData = function()
     {
@@ -37,7 +37,7 @@ app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function
     }
 
     $scope.loadData();
-    $rootScope.setInterval($scope.loadData);
+    ArtisterilIntervalService.setInterval($scope.loadData);
 
 
     function fixDate(date)

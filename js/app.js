@@ -1,5 +1,6 @@
 var app = angular.module("myApp", [
-    "ngRoute"
+    "ngRoute",
+    'ArtisterilIntervalService'
 ]);
 
 app.config(function ($routeProvider) { 
@@ -45,7 +46,10 @@ app.run(function($rootScope, $http, $location) {
     });
 
 
+    // when URL changes
     $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+
+        // set css classes on nav
         $("header nav a").removeClass("selected");
         switch($location.path()) {
             case '/':
@@ -59,21 +63,9 @@ app.run(function($rootScope, $http, $location) {
                 break;
         } 
         $('h1.page-title').html($('header nav .selected').html());
+
     });
 
-
-    $rootScope.intervals = [];
-
-    $rootScope.setInterval = function(callback) {
-        $rootScope.intervals.push(setInterval(callback, $rootScope.settings.dataRefreshTime));
-    };
-
-    $rootScope.clearIntervals = function() {
-        for (i in $rootScope.intervals) {
-            clearInterval($rootScope.intervals[i]);
-        }
-        $rootScope.intervals = [];
-    };
 });
     
 

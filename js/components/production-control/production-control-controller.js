@@ -1,12 +1,11 @@
-app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
+app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 'ArtisterilIntervalService', function($scope, $rootScope, $http, ArtisterilIntervalService) { 
 
 	$("header nav").attr("class", "production-control");
 
-    $scope.ordersData = {};
-    $scope.destinationsData = {};
+    $scope.ordersData = [];
+    $scope.destinationsData = [];
     
-    $rootScope.clearIntervals();
-
+    ArtisterilIntervalService.clearIntervals();
 
     $scope.loadOrdersData = function()
     {
@@ -21,7 +20,7 @@ app.controller('ProductionControlController', ['$scope', '$rootScope', '$http', 
         });
     }
     $scope.loadOrdersData();
-    $rootScope.setInterval(function(){
+    ArtisterilIntervalService.setInterval(function(){
         if ($('.production-control select:focus').length==0) {
             $scope.loadOrdersData();
         };

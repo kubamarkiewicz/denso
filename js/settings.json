@@ -1,5 +1,6 @@
 {
     "dataRefreshTime": 1000,
+    "incidentShowTime": 1500,
     "webServiceURLs": {
     	"getDestinations"	: "dummy-data/get_destinations.json",
     	"getOrders"			: "dummy-data/get_orders.json",
