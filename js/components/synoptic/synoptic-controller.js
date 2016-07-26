@@ -1,7 +1,5 @@
 app.controller('SynopticController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
 	
-	$("header nav").attr("class", "synoptic");
-
 	$scope.tagsData = {};
     $scope.AGVData = {};
 	$scope.AGVPositionsData = {};

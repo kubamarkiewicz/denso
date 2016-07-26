@@ -1,7 +1,5 @@
 app.controller('TagsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
 
-	$("header nav").attr("class", "tags");
-
     $rootScope.clearIntervals();
 
     $scope.tagsData = {};

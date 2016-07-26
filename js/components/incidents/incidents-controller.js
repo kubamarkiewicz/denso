@@ -1,6 +1,8 @@
 app.controller('IncidentsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {  
 
-	$("header nav").attr("class", "incidents");
+    $("header nav a").removeClass("selected");
+    $("header nav a.incidents").addClass("selected");
+
 
     $scope.data = {};
     $scope.filterAGVId = "0";

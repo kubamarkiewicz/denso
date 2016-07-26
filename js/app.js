@@ -32,7 +32,8 @@ app.config(['$httpProvider', function($httpProvider) {
     }
 ]);
 
-app.run(function($rootScope, $http) {
+
+app.run(function($rootScope, $http, $location) {
 
     // load settings
     $http({
@@ -43,6 +44,22 @@ app.run(function($rootScope, $http) {
         $rootScope.settings = data;
     });
 
+
+    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+        $("header nav a").removeClass("selected");
+        switch($location.path()) {
+            case '/':
+                $("header nav .production-control").addClass("selected");
+                break;
+            case '/incidents':
+                $("header nav .incidents").addClass("selected");
+                break;
+            case '/synoptic':
+                $("header nav .synoptic").addClass("selected");
+                break;
+        } 
+        $('h1.page-title').html($('header nav .selected').html());
+    });
 
 
     $rootScope.intervals = [];

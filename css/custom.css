@@ -194,9 +194,6 @@ header nav a:focus {
 	font-size: 30px;
 }
 header nav a:hover,
-header nav.production-control a.production-control,
-header nav.synoptic a.synoptic,
-header nav.incidents a.incidents,
 header nav a.selected {
 	background-color: #0276af;
 	color: #ffffff;
@@ -325,7 +322,7 @@ section.synoptic #incidents {
 	right: 30px;
 	top: 60px;
 	padding: 35px;
-	width: 70%;
+	width: 71.6%;
 	text-align: center;
 	font-size: 24px;
 	z-index: 3;
@@ -343,6 +340,7 @@ section.synoptic #statisitcs {
 	font-size: 18px;
 	font-weight: bold;
 	z-index: 3;
+	width: 100%;
 }
 section.synoptic #statisitcs .legend {
 	margin-bottom: 8px;
@@ -373,6 +371,7 @@ section.synoptic .color-5 {
 }
 section.synoptic #statisitcs .graph-wrap {
 	margin-bottom: 3px;
+	width: 100%;
 }
 section.synoptic #statisitcs .graph-wrap .title {
 	display: inline;
@@ -382,12 +381,12 @@ section.synoptic #statisitcs .graph-wrap .title {
 section.synoptic #statisitcs .graph-wrap .graph {
 	display: inline-block;
 	height: 30px;
-	width: 1000px;
 	position: relative;
 	color: #ffffff;
 	text-align: left;
 	vertical-align: middle;
 	margin-top: -7px;
+	width: 71.6%;
 }
 section.synoptic #statisitcs .graph-wrap .graph .value {
 	display: inline-block;
