@@ -391,10 +391,10 @@ section.synoptic #statisitcs .graph-wrap .graph {
 section.synoptic #statisitcs .graph-wrap .graph .value {
 	display: inline-block;
 	float: left;
-	padding-left: 5px;
 	border-left: 1px solid #f0f0f0;
 	height: 100%;
-	line-height: 30px;;
+	line-height: 30px;
+	text-indent: 5px;;
 }
 
 

@@ -1,9 +1,5 @@
 app.controller('IncidentsController', ['$scope', '$rootScope', '$http', 'ArtisterilIntervalService', function($scope, $rootScope, $http, ArtisterilIntervalService) {  
 
-    $("header nav a").removeClass("selected");
-    $("header nav a.incidents").addClass("selected");
-
-
     $scope.data = [];
     $scope.filterAGVId = "0";
     
