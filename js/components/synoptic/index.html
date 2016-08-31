@@ -14,11 +14,11 @@
 			<div class="graph-wrap" ng-repeat="(IdAGV, statistics) in statisticsData">
 				<div class="title">AGV {{ IdAGV }}</div>
 				<div class="graph">
-					<div class="value color-1" style="width:{{ statistics.Working }}%">{{ statistics.Working }}<span ng-if="statistics.Working > 2">%</span></div>
-					<div class="value color-2" style="width:{{ statistics.Stoped }}%">{{ statistics.Stoped }}<span ng-if="statistics.Stoped > 2">%</span></div>
-					<div class="value color-3" style="width:{{ statistics.Scanner }}%">{{ statistics.Scanner }}<span ng-if="statistics.Scanner > 2">%</span></div>
-					<div class="value color-4" style="width:{{ statistics.Fault }}%">{{ statistics.Fault }}<span ng-if="statistics.Fault > 2">%</span></div>
-					<div class="value color-5" style="width:{{ statistics.Offline }}%">{{ statistics.Offline }}<span ng-if="statistics.Offline > 2">%</span></div>
+					<div class="value color-1" style="width:{{ statistics.Working }}%"><span ng-if="statistics.Working > 2">{{ statistics.Working }}%</span></div>
+					<div class="value color-2" style="width:{{ statistics.Stoped }}%"><span ng-if="statistics.Stoped > 2">{{ statistics.Stoped }}%</span></div>
+					<div class="value color-3" style="width:{{ statistics.Scanner }}%"><span ng-if="statistics.Scanner > 2">{{ statistics.Scanner }}%</span></div>
+					<div class="value color-4" style="width:{{ statistics.Fault }}%"><span ng-if="statistics.Fault > 2">{{ statistics.Fault }}%</span></div>
+					<div class="value color-5" style="width:{{ statistics.Offline }}%"><span ng-if="statistics.Offline > 2">{{ statistics.Offline }}%</span></div>
 				</div>
 			</div>
 		</div>
