@@ -34,7 +34,7 @@ app.config(['$httpProvider', function($httpProvider) {
 ]);
 
 
-app.run(function($rootScope, $http, $location) {
+app.run(function($rootScope, $http, $location, ArtisterilIntervalService) {
 
     // load settings
     $http({
@@ -65,6 +65,18 @@ app.run(function($rootScope, $http, $location) {
         $('h1.page-title').html($('header nav .selected').html());
 
     });
+
+
+    // clock
+
+    function updateClock() 
+    {
+        var currentdate = new Date();
+        $('header .clock .hour').html(currentdate.getHours() < 10 ? "0" + currentdate.getHours() : currentdate.getHours());
+        $('header .clock .minutes').html(currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes());
+        $('header .clock .separator').toggleClass('hidden');
+    }
+    setInterval(updateClock, 1000);
 
 });
     

@@ -148,6 +148,26 @@ footer {
 header {
 	background-color: #ffffff;
 }
+header .clock {
+	float: right;
+	color: #ffffff;
+    text-transform: uppercase;
+    padding: 28px 30px 0 0;
+	white-space: nowrap;
+}
+header .clock .hour {
+	font-weight: 500; 
+}
+header .clock .minutes {
+	font-weight: 500; 
+}
+header .clock .separator {
+	font-weight: 500; 
+}
+header .clock .separator.hidden {
+	display: inline !important;
+	opacity: 0.07;
+}
 header .app-name {
 	height: 64px;
 	background-color: #00557f;
