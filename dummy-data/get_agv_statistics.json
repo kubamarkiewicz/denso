@@ -1,4 +1,4 @@
 {"Get_AGVS_OccupationResult":[
-	{"Fault":2,"IdAGV":1,"Offline":2,"Scanner":2,"Stoped":2,"Working":2},
+	{"Fault":8,"IdAGV":1,"Offline":8,"Scanner":51,"Stoped":18,"Working":15},
 	{"Fault":6,"IdAGV":2,"Offline":4,"Scanner":10,"Stoped":20,"Working":60}
 ]}

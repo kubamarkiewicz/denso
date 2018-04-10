@@ -1,6 +1,6 @@
-app.controller('TagsController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) { 
+app.controller('TagsController', ['$scope', '$rootScope', '$http', 'ArtisterilIntervalService', function($scope, $rootScope, $http, ArtisterilIntervalService) { 
 
-    $rootScope.clearIntervals();
+    ArtisterilIntervalService.clearIntervals();
 
     $scope.tagsData = {};
     $scope.selectedTag = null;

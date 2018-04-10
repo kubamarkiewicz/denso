@@ -2,7 +2,7 @@
 	<section class="tags" ng-class="{'edit': selectedTag}">
 
 		<aside ng-if="!selectedTag">
-			<button class="btn btn-default" ng-click="addTag()"><span class="glyphicon glyphicon-plus"></span> Add tag</button>
+			<a class="" ng-click="addTag()"><span class="glyphicon glyphicon-plus"></span> Add tag</a>
 			<br>
 			<br>
 			<p class="help-block">or Click any tag to edit it</p>
@@ -11,10 +11,10 @@
 
 			<div class="row">
 				<div class="col-xs-6">
-					<div class="btn btn-primary" class="save" ng-click="saveTag()"><span class="glyphicon glyphicon-ok"></span> Save</div>
+					<a class="" class="save" ng-click="saveTag()"><span class="glyphicon glyphicon-ok"></span> Save</a>
 				</div>
-				<div class="col-xs-6">
-					<div class="btn btn-link" class="cancel" ng-click="cancelEditting()">Cancel</div>
+				<div class="col-xs-6 text-right">
+					<a class="" class="cancel" ng-click="cancelEditting()">Cancel</a>
 				</div>
 			</div>	
 
@@ -59,7 +59,7 @@
 			</div>
 
 			<div class="text-right">
-				<div class="btn btn-link" ng-click="deleteTag()"><span class="glyphicon glyphicon-trash"></span></div>
+				<a class="" ng-click="deleteTag()"><span class="glyphicon glyphicon-trash"></span></a>
 			</div>
 
 

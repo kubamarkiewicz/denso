@@ -59,7 +59,7 @@ a:focus, a:active {
 /***********************************************/
 
 .btn {
-	border-radius: 0;
+	border-radius: 3px;
 	text-transform: uppercase;
 	font-size: 16px;
 	border-bottom-width: 2px;
@@ -111,8 +111,8 @@ select::-ms-expand {
 }
 
 .form-control {
-	border-radius: 0;
 	font-size: 16px;
+	border-radius: 3px;
 }
 
 .help-block {
@@ -571,6 +571,9 @@ section.tags aside {
 section.tags aside.edit {
 	color: #ffffff;
 	background-color: #72bd00;
+}
+section.tags aside.edit a {
+	color: #ffffff;
 }
 section.tags aside.edit .form-control {
 	border: 0;
